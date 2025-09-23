@@ -1,0 +1,31 @@
+# Исключаем исходники
+src/
+*.ts
+
+# Конфиги и метаданные
+tsconfig.json
+tsconfig.*.json
+.eslintrc*
+.prettierrc*
+*.config.js
+*.config.cjs
+*.config.mjs
+*.config.ts
+
+# Пакетные менеджеры
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Системные
+.DS_Store
+.git
+.gitignore
+.npmignore
+
+# Тесты
+__tests__/
+*.spec.ts
+*.test.ts
+coverage/
