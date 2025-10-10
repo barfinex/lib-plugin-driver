@@ -1,24 +1,46 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2020", // современный таргет
-    "module": "CommonJS", // npm ожидает CJS по умолчанию
-    "declaration": true, // генерируем .d.ts
-    "emitDeclarationOnly": false, // генерируем и js, и d.ts
-    "declarationDir": "./dist", // куда складывать .d.ts
-    "outDir": "./dist", // папка для js
-    "rootDir": "./src", // исходники
-    "strict": true, // строгая типизация
+    "target": "ES2020",
+    "module": "CommonJS",
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "rootDir": "./src",
+    "outDir": "../../dist/libs/plugin-driver", // 📦 общий dist
+    "tsBuildInfoFile": "../../dist/libs/plugin-driver.tsbuildinfo", // ✅ уникальный build cache
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "composite": true,
+    "baseUrl": "../../", // ✅ важно для алиасов
+    "paths": {
+      "@barfinex/types": [
+        "libs/types/src"
+      ],
+      "@barfinex/utils": [
+        "libs/utils/src"
+      ],
+      "@barfinex/utils/*": [
+        "libs/utils/src/*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "**/*.spec.ts",
     "**/*.test.ts"
+  ],
+  "references": [
+    {
+      "path": "../types"
+    },
+    {
+      "path": "../utils"
+    }
   ]
 }
