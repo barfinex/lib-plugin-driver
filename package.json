@@ -16,11 +16,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.app.json",
     "clean": "rimraf dist",
+    "build": "tsc -p tsconfig.app.json",
+    "rebuild": "npm run clean && npm run build",
     "release": "semantic-release"
   },
   "keywords": [
@@ -30,33 +32,33 @@
     "plugin",
     "plugin-driver",
     "plugin-system",
-    "plugin-architecture",
     "plugin-framework",
     "lifecycle",
     "extension",
-    "discovery",
     "typescript"
   ],
   "dependencies": {
-    "@barfinex/types": "*"
+    "@barfinex/types": "1.0.14",
+    "@barfinex/utils": "1.0.1"
   },
   "peerDependencies": {
     "@nestjs/common": "^10.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.6.0",
-    "rimraf": "^5.0.0",
-    "semantic-release": "^24.0.0",
+    "typescript": "^5.6.3",
+    "rimraf": "^5.0.5",
+    "semantic-release": "^24.1.0",
     "@semantic-release/npm": "^12.0.0",
-    "@semantic-release/git": "^10.0.0",
-    "@semantic-release/github": "^10.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/node": "^20.11.30",
     "@nestjs/common": "^10.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "release": {
     "branches": [

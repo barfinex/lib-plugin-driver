@@ -1,19 +1,19 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
     "declaration": true,
     "emitDeclarationOnly": false,
-    "rootDir": "./src",
-    "outDir": "../../dist/libs/plugin-driver", // 📦 общий dist
-    "tsBuildInfoFile": "../../dist/libs/plugin-driver.tsbuildinfo", // ✅ уникальный build cache
+    "rootDir": "src",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/plugin-driver.tsbuildinfo",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "composite": true,
-    "baseUrl": "../../", // ✅ важно для алиасов
+    "baseUrl": "../../",
     "paths": {
       "@barfinex/types": [
         "libs/types/src"
@@ -35,12 +35,4 @@
     "**/*.spec.ts",
     "**/*.test.ts"
   ],
-  "references": [
-    {
-      "path": "../types"
-    },
-    {
-      "path": "../utils"
-    }
-  ]
 }
