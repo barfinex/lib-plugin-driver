@@ -1,117 +1,17 @@
 {
-  "files": [],
-  "compilerOptions": {
-    /* ===== Target & Module ===== */
-    "target": "ES2022",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    /* ===== Output ===== */
-    "outDir": "dist",
-    "rootDir": ".",
-    "composite": true,
-    "incremental": true,
-    /* ===== NestJS / Decorators ===== */
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "useDefineForClassFields": false,
-    /* ===== Strict Type Checking ===== */
-    "strict": true,
-    "noImplicitAny": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "strictPropertyInitialization": false,
-    /* ===== Interop / Node ===== */
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    /* ===== Aliases for Monorepo ===== */
-    "baseUrl": ".",
-    "paths": {
-      "@barfinex/types": [
-        "libs/types/src"
-      ],
-      "@barfinex/types/*": [
-        "libs/types/src/*"
-      ],
-      "@barfinex/utils": [
-        "libs/utils/src"
-      ],
-      "@barfinex/utils/*": [
-        "libs/utils/src/*"
-      ],
-      "@barfinex/key": [
-        "libs/key/src"
-      ],
-      "@barfinex/key/*": [
-        "libs/key/src/*"
-      ],
-      "@barfinex/config": [
-        "libs/config/src"
-      ],
-      "@barfinex/config/*": [
-        "libs/config/src/*"
-      ],
-      "@barfinex/plugin-driver": [
-        "libs/plugin-driver/src"
-      ],
-      "@barfinex/plugin-driver/*": [
-        "libs/plugin-driver/src/*"
-      ],
-      "@barfinex/connectors": [
-        "libs/connectors/src"
-      ],
-      "@barfinex/connectors/*": [
-        "libs/connectors/src/*"
-      ],
-      "@barfinex/orders": [
-        "libs/orders/src"
-      ],
-      "@barfinex/orders/*": [
-        "libs/orders/src/*"
-      ],
-      "@barfinex/provider-ws-bridge": [
-        "libs/provider-ws-bridge/src"
-      ],
-      "@barfinex/provider-ws-bridge/*": [
-        "libs/provider-ws-bridge/src/*"
-      ],
-      "@barfinex/telegram": [
-        "libs/telegram/src"
-      ],
-      "@barfinex/telegram/*": [
-        "libs/telegram/src/*"
-      ],
-      "@barfinex/detector": [
-        "libs/detector/src"
-      ],
-      "@barfinex/detector/*": [
-        "libs/detector/src/*"
-      ],
-      "@barfinex/alerts": [
-        "libs/alerts/src"
-      ],
-      "@barfinex/alerts/*": [
-        "libs/alerts/src/*"
-      ],
-      "@barfinex/indicators": [
-        "libs/indicators/src"
-      ],
-      "@barfinex/indicators/*": [
-        "libs/indicators/src/*"
-      ],
-      "@barfinex/plugins": [
-        "libs/plugins/src"
-      ],
-      "@barfinex/plugins/*": [
-        "libs/plugins/src/*"
-      ]
-    }
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+        "composite": true
+    },
+    "include": [
+        "src"
+    ],
+    "references": [
+        {
+            "path": "../types"
+        },
+        {
+            "path": "../utils"
+        }
+    ]
 }
