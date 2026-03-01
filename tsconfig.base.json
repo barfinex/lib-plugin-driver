@@ -1,3 +1,68 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "module": "CommonJS",
+//     "moduleResolution": "node",
+//     "outDir": "dist",
+//     "rootDir": ".",
+//     "composite": true,
+//     "incremental": true,
+//     "experimentalDecorators": true,
+//     "emitDecoratorMetadata": true,
+//     "useDefineForClassFields": false,
+//     "strict": true,
+//     "noImplicitAny": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "noUnusedLocals": false,
+//     "noUnusedParameters": false,
+//     "strictPropertyInitialization": false,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "resolveJsonModule": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "@barfinex/types": [
+//         "dist/libs/types"
+//       ],
+//       "@barfinex/utils": [
+//         "dist/libs/utils"
+//       ],
+//       "@barfinex/key": [
+//         "dist/libs/key"
+//       ],
+//       "@barfinex/config": [
+//         "dist/libs/config"
+//       ],
+//       "@barfinex/plugin-driver": [
+//         "dist/libs/plugin-driver"
+//       ],
+//       "@barfinex/connectors": [
+//         "dist/libs/connectors"
+//       ],
+//       "@barfinex/orders": [
+//         "dist/libs/orders"
+//       ],
+//       "@barfinex/provider-ws-bridge": [
+//         "dist/libs/provider-ws-bridge"
+//       ],
+//       "@barfinex/telegram": [
+//         "dist/libs/telegram"
+//       ],
+//       "@barfinex/detector": [
+//         "dist/libs/detector"
+//       ]
+//     }
+//   },
+//   "exclude": [
+//     "node_modules",
+//     "dist"
+//   ]
+// }
+
+
+
 {
   "compilerOptions": {
     "target": "ES2022",
@@ -7,33 +72,40 @@
     "rootDir": ".",
     "composite": true,
     "incremental": true,
-    /* Decorators / NestJS */
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "useDefineForClassFields": false,
-    /* Strictness */
     "strict": true,
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "strictPropertyInitialization": false,
-    /* Interop */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    /* Base path + Aliases */
     "baseUrl": ".",
     "paths": {
-      "@barfinex/*": [
-        "libs/*/src"
-      ]
+      "@barfinex/types": ["libs/types/src"],
+      "@barfinex/utils": ["libs/utils/src"],
+      "@barfinex/key": ["libs/key/src"],
+      "@barfinex/config": ["libs/config/src"],
+      "@barfinex/plugin-driver": ["libs/plugin-driver/src"],
+      "@barfinex/connectors": ["libs/connectors/src"],
+      "@barfinex/orders": ["libs/orders/src"],
+      "@barfinex/provider-ws-bridge": ["libs/provider-ws-bridge/src"],
+      "@barfinex/provider-mcp": ["libs/provider-mcp/src"],
+      "@barfinex/indicators": ["libs/indicators/src"],
+      "@barfinex/plugins/trade-journal/src": ["libs/plugins/trade-journal/src"],
+      "@barfinex/plugins/trade-journal/src/*": ["libs/plugins/trade-journal/src/*"],
+      "@barfinex/plugins/orderflow-trade-analytics/src": ["libs/plugins/orderflow-trade-analytics/src"],
+      "@barfinex/plugins/orderflow-trade-analytics/src/*": ["libs/plugins/orderflow-trade-analytics/src/*"],
+      "@barfinex/telegram": ["libs/telegram/src"],
+      "@barfinex/alerts": ["libs/alerts/src"],
+      "@barfinex/detector": ["libs/detector/src"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["node_modules", "dist"]
 }
