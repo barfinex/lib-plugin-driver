@@ -1,14 +1,4 @@
 {
-    "extends": "./tsconfig.app.json",
-    "compilerOptions": {
-        "paths": {
-            "@barfinex/types": [
-                "@barfinex/types"
-            ],
-            "@barfinex/utils": [
-                "@barfinex/utils"
-            ]
-        }
-    },
-    "references": []
+  "extends": "./tsconfig.app.json",
+  "references": []
 }

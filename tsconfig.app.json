@@ -1,37 +1,13 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    /* === базовые параметры === */
     "target": "ES2020",
-    "module": "CommonJS",
-    /* === генерация === */
     "declaration": true,
     "emitDeclarationOnly": false,
-    /* === структура === */
     "rootDir": "src",
     "outDir": "./dist",
     "declarationDir": "./dist",
-    "tsBuildInfoFile": "../../dist/libs/plugin-driver.tsbuildinfo",
-    /* === строгость и совместимость === */
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    /* === проектная сборка === */
-    "composite": true,
-    /* === алиасы === */
-    "baseUrl": "../../",
-    "paths": {
-      "@barfinex/types": [
-        "libs/types/src"
-      ],
-      "@barfinex/utils": [
-        "libs/utils/src"
-      ],
-      "@barfinex/utils/*": [
-        "libs/utils/src/*"
-      ]
-    }
+    "tsBuildInfoFile": "../../dist/libs/plugin-driver.tsbuildinfo"
   },
   "include": [
     "src/**/*.ts"

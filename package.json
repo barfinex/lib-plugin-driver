@@ -13,8 +13,8 @@
   "bugs": {
     "url": "https://github.com/barfinex/lib-plugin-driver/issues"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -29,8 +29,12 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist tsconfig.tsbuildinfo",
+    "prebuild": "node ../../tools/hygiene/clean-compiled-in-src.js",
     "build": "tsc -p tsconfig.app.json",
+    "postbuild": "node ../../tools/hygiene/verify-no-compiled-in-src.js",
+    "prebuild:npm": "node ../../tools/hygiene/clean-compiled-in-src.js",
     "build:npm": "tsc -p tsconfig.build.json",
+    "postbuild:npm": "node ../../tools/hygiene/verify-no-compiled-in-src.js",
     "rebuild": "npm run clean && npm run build",
     "release": "semantic-release"
   },
@@ -73,5 +77,6 @@
     "branches": [
       "main"
     ]
-  }
+  },
+  "buildDate": "2026-03-26"
 }

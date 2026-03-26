@@ -1,75 +1,8 @@
-// {
-//   "compilerOptions": {
-//     "target": "ES2022",
-//     "module": "CommonJS",
-//     "moduleResolution": "node",
-//     "outDir": "dist",
-//     "rootDir": ".",
-//     "composite": true,
-//     "incremental": true,
-//     "experimentalDecorators": true,
-//     "emitDecoratorMetadata": true,
-//     "useDefineForClassFields": false,
-//     "strict": true,
-//     "noImplicitAny": true,
-//     "noFallthroughCasesInSwitch": true,
-//     "noUnusedLocals": false,
-//     "noUnusedParameters": false,
-//     "strictPropertyInitialization": false,
-//     "esModuleInterop": true,
-//     "allowSyntheticDefaultImports": true,
-//     "resolveJsonModule": true,
-//     "skipLibCheck": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "baseUrl": ".",
-//     "paths": {
-//       "@barfinex/types": [
-//         "dist/libs/types"
-//       ],
-//       "@barfinex/utils": [
-//         "dist/libs/utils"
-//       ],
-//       "@barfinex/key": [
-//         "dist/libs/key"
-//       ],
-//       "@barfinex/config": [
-//         "dist/libs/config"
-//       ],
-//       "@barfinex/plugin-driver": [
-//         "dist/libs/plugin-driver"
-//       ],
-//       "@barfinex/connectors": [
-//         "dist/libs/connectors"
-//       ],
-//       "@barfinex/orders": [
-//         "dist/libs/orders"
-//       ],
-//       "@barfinex/provider-ws-bridge": [
-//         "dist/libs/provider-ws-bridge"
-//       ],
-//       "@barfinex/telegram": [
-//         "dist/libs/telegram"
-//       ],
-//       "@barfinex/detector": [
-//         "dist/libs/detector"
-//       ]
-//     }
-//   },
-//   "exclude": [
-//     "node_modules",
-//     "dist"
-//   ]
-// }
-
-
-
 {
   "compilerOptions": {
     "target": "ES2022",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": ".",
     "composite": true,
     "incremental": true,
     "experimentalDecorators": true,
@@ -85,27 +18,187 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "outDir": "dist/.tsc",
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@barfinex/types": ["libs/types/src"],
-      "@barfinex/utils": ["libs/utils/src"],
-      "@barfinex/key": ["libs/key/src"],
-      "@barfinex/config": ["libs/config/src"],
-      "@barfinex/plugin-driver": ["libs/plugin-driver/src"],
-      "@barfinex/connectors": ["libs/connectors/src"],
-      "@barfinex/orders": ["libs/orders/src"],
-      "@barfinex/provider-ws-bridge": ["libs/provider-ws-bridge/src"],
-      "@barfinex/provider-mcp": ["libs/provider-mcp/src"],
-      "@barfinex/indicators": ["libs/indicators/src"],
-      "@barfinex/plugins/trade-journal/src": ["libs/plugins/trade-journal/src"],
-      "@barfinex/plugins/trade-journal/src/*": ["libs/plugins/trade-journal/src/*"],
-      "@barfinex/plugins/orderflow-trade-analytics/src": ["libs/plugins/orderflow-trade-analytics/src"],
-      "@barfinex/plugins/orderflow-trade-analytics/src/*": ["libs/plugins/orderflow-trade-analytics/src/*"],
-      "@barfinex/telegram": ["libs/telegram/src"],
-      "@barfinex/alerts": ["libs/alerts/src"],
-      "@barfinex/detector": ["libs/detector/src"]
+      "@barfinex/types": [
+        "libs/types/src/index"
+      ],
+      "@barfinex/utils": [
+        "libs/utils/src/index"
+      ],
+      "@barfinex/key": [
+        "libs/key/src/index"
+      ],
+      "@barfinex/config": [
+        "libs/config/src/index"
+      ],
+      "@barfinex/plugin-driver": [
+        "libs/plugin-driver/src/index"
+      ],
+      "@barfinex/connectors": [
+        "libs/connectors/src/index"
+      ],
+      "@barfinex/orders": [
+        "libs/orders/src/index"
+      ],
+      "@barfinex/provider-ws-bridge": [
+        "libs/provider-ws-bridge/src/index"
+      ],
+      "@barfinex/provider-mcp": [
+        "libs/provider-mcp/src/index"
+      ],
+      "@barfinex/indicators": [
+        "libs/indicators/src/index"
+      ],
+      "@barfinex/risk-engine": [
+        "libs/risk-engine/src/index"
+      ],
+      "@barfinex/portfolio-engine": [
+        "libs/portfolio-engine/src/index"
+      ],
+      "@barfinex/backtest-engine": [
+        "libs/backtest-engine/src/index"
+      ],
+      "@barfinex/capital-engine": [
+        "libs/capital-engine/src/index"
+      ],
+      "@barfinex/calibration": [
+        "libs/calibration/src/index"
+      ],
+      "@barfinex/signal-engine": [
+        "libs/signal-engine/src/index"
+      ],
+      "@barfinex/event-bus": [
+        "libs/event-bus/src/index"
+      ],
+      "@barfinex/detector-plugin-trade-journal": [
+        "libs/plugins/trade-journal/src/index"
+      ],
+      "@barfinex/detector-plugin-orderflow-trade-analytics": [
+        "libs/plugins/orderflow-trade-analytics/src/index"
+      ],
+      "@barfinex/telegram": [
+        "libs/telegram/src/index"
+      ],
+      "@barfinex/alerts": [
+        "libs/alerts/src/index"
+      ],
+      "@barfinex/detector": [
+        "libs/detector/src/index"
+      ],
+      "@barfinex/market-quality": [
+        "libs/market-quality/src/index"
+      ],
+      "@barfinex/patterns": [
+        "libs/patterns/src/index"
+      ],
+      "@barfinex/redis-client": [
+        "libs/redis-client/src/index"
+      ],
+      "@barfinex/diagnostics": [
+        "libs/diagnostics/src/index"
+      ],
+      "@barfinex/provider-contract": [
+        "libs/provider-contract/src/index"
+      ]
+      ,"@barfinex/exchange-binance": [
+        "libs/exchange-binance/src/index"
+      ]
+      ,"@barfinex/exchange-ib": [
+        "libs/exchange-ib/src/index"
+      ]
+      ,"@barfinex/exchange-bybit": [
+        "libs/exchange-bybit/src/index"
+      ]
+      ,"@barfinex/exchange-okx": [
+        "libs/exchange-okx/src/index"
+      ]
+      ,"@barfinex/exchange-bitget": [
+        "libs/exchange-bitget/src/index"
+      ]
+      ,"@barfinex/exchange-gate": [
+        "libs/exchange-gate/src/index"
+      ]
+      ,"@barfinex/exchange-kucoin": [
+        "libs/exchange-kucoin/src/index"
+      ]
+      ,"@barfinex/exchange-mexc": [
+        "libs/exchange-mexc/src/index"
+      ]
+      ,"@barfinex/exchange-htx": [
+        "libs/exchange-htx/src/index"
+      ]
+      ,"@barfinex/exchange-kraken": [
+        "libs/exchange-kraken/src/index"
+      ]
+      ,"@barfinex/exchange-coinbase": [
+        "libs/exchange-coinbase/src/index"
+      ]
+      ,"@barfinex/exchange-cryptocom": [
+        "libs/exchange-cryptocom/src/index"
+      ]
+      ,"@barfinex/exchange-bingx": [
+        "libs/exchange-bingx/src/index"
+      ]
+      ,"@barfinex/exchange-phemex": [
+        "libs/exchange-phemex/src/index"
+      ]
+      ,"@barfinex/exchange-alpaca": [
+        "libs/exchange-alpaca/src/index"
+      ]
+      ,"@barfinex/exchange-tinkoff": [
+        "libs/exchange-tinkoff/src/index"
+      ]
+      ,"@barfinex/exchange-tradier": [
+        "libs/exchange-tradier/src/index"
+      ]
+      ,"@barfinex/exchange-bitstamp": ["libs/exchange-bitstamp/src/index"]
+      ,"@barfinex/exchange-gemini": ["libs/exchange-gemini/src/index"]
+      ,"@barfinex/exchange-dex": ["libs/exchange-dex/src/index"]
+      ,"@barfinex/exchange-deribit": ["libs/exchange-deribit/src/index"]
+      ,"@barfinex/exchange-wintermute": ["libs/exchange-wintermute/src/index"]
+      ,"@barfinex/exchange-jump-trading": ["libs/exchange-jump-trading/src/index"]
+      ,"@barfinex/exchange-cumberland": ["libs/exchange-cumberland/src/index"]
+      ,"@barfinex/exchange-falconx": ["libs/exchange-falconx/src/index"]
+      ,"@barfinex/exchange-robinhood": ["libs/exchange-robinhood/src/index"]
+      ,"@barfinex/exchange-etrade": ["libs/exchange-etrade/src/index"]
+      ,"@barfinex/exchange-charles-schwab": ["libs/exchange-charles-schwab/src/index"]
+      ,"@barfinex/exchange-fidelity": ["libs/exchange-fidelity/src/index"]
+      ,"@barfinex/exchange-etoro": ["libs/exchange-etoro/src/index"]
+      ,"@barfinex/exchange-trading212": ["libs/exchange-trading212/src/index"]
+      ,"@barfinex/exchange-ig-group": ["libs/exchange-ig-group/src/index"]
+      ,"@barfinex/exchange-hargreaves-lansdown": ["libs/exchange-hargreaves-lansdown/src/index"]
+      ,"@barfinex/exchange-degiro": ["libs/exchange-degiro/src/index"]
+      ,"@barfinex/exchange-tiger-brokers": ["libs/exchange-tiger-brokers/src/index"]
+      ,"@barfinex/exchange-futu": ["libs/exchange-futu/src/index"]
+      ,"@barfinex/exchange-rakuten-securities": ["libs/exchange-rakuten-securities/src/index"]
+      ,"@barfinex/exchange-kase": ["libs/exchange-kase/src/index"]
+      ,"@barfinex/exchange-aix": ["libs/exchange-aix/src/index"]
+      ,"@barfinex/exchange-freedom-finance": ["libs/exchange-freedom-finance/src/index"]
+      ,"@barfinex/exchange-halyk-finance": ["libs/exchange-halyk-finance/src/index"]
+      ,"@barfinex/exchange-bcc-invest": ["libs/exchange-bcc-invest/src/index"]
+      ,"@barfinex/exchange-oanda": ["libs/exchange-oanda/src/index"]
+      ,"@barfinex/exchange-forex-com": ["libs/exchange-forex-com/src/index"]
+      ,"@barfinex/exchange-ig-markets": ["libs/exchange-ig-markets/src/index"]
+      ,"@barfinex/exchange-pepperstone": ["libs/exchange-pepperstone/src/index"]
+      ,"@barfinex/exchange-xm": ["libs/exchange-xm/src/index"]
+      ,"@barfinex/exchange-saxo-bank": ["libs/exchange-saxo-bank/src/index"]
+      ,"@barfinex/exchange-cme-group": ["libs/exchange-cme-group/src/index"]
+      ,"@barfinex/exchange-ice": ["libs/exchange-ice/src/index"]
+      ,"@barfinex/exchange-tradovate": ["libs/exchange-tradovate/src/index"]
+      ,"@barfinex/exchange-ninjatrader": ["libs/exchange-ninjatrader/src/index"]
+      ,"@barfinex/exchange-polygon": ["libs/exchange-polygon/src/index"]
+      ,"@barfinex/exchange-tiingo": ["libs/exchange-tiingo/src/index"]
+      ,"@barfinex/exchange-glassnode": ["libs/exchange-glassnode/src/index"]
+      ,"@barfinex/exchange-coinglass": ["libs/exchange-coinglass/src/index"]
+      ,"@barfinex/exchange-kaiko": ["libs/exchange-kaiko/src/index"]
+      ,"@barfinex/exchange-messari": ["libs/exchange-messari/src/index"]
     }
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
